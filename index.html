@@ -15,12 +15,17 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
         body {
             font-family: 'Inter', sans-serif;
-            /* Fondo corporativo oscuro: Slate 900 */
             background-color: #0f172a; 
         }
-        .text-primary { color: #3b82f6; /* Blue 500 para autoridad */ }
-        .text-accent { color: #f59e0b; /* Amber 500 para destacar el valor */ }
-        
+
+        /* === Colores corporativos (corrección de bordes y fondos) === */
+        .text-primary { color: #3b82f6; } /* Azul autoridad */
+        .text-accent { color: #f59e0b; } /* Dorado valor */
+        .border-primary { border-color: #3b82f6 !important; }
+        .border-accent { border-color: #f59e0b !important; }
+        .bg-primary { background-color: #3b82f6 !important; }
+        .bg-accent { background-color: #f59e0b !important; }
+
         /* Animación de Rebote/Atención para el botón principal */
         @keyframes subtle-bounce {
             0%, 100% {
@@ -28,43 +33,40 @@
                 box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
             }
             50% {
-                transform: translateY(-5px); /* Pequeño "salto" */
-                box-shadow: 0 15px 25px -5px rgba(245, 158, 11, 0.6); /* Sombra más intensa */
+                transform: translateY(-5px);
+                box-shadow: 0 15px 25px -5px rgba(245, 158, 11, 0.6);
             }
         }
         .cta-attention {
-            animation: subtle-bounce 1s ease-in-out infinite 2s; /* 1s de animación, se repite infinitamente, pero empieza con un delay de 2s */
+            animation: subtle-bounce 1s ease-in-out infinite 2s;
         }
 
         .whatsapp-button {
             transition: all 0.3s ease;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
-            font-size: 1.125rem; /* lg */
-            padding: 1rem 2rem; /* Más grandes */
+            font-size: 1.125rem;
+            padding: 1rem 2rem;
         }
         .whatsapp-button:hover {
             transform: translateY(-4px); 
         }
-        /* Estilo para el botón de acción principal (dorado) */
         .cta-main {
             background-color: #f59e0b;
-            color: #1f2937; /* Dark text for contrast */
+            color: #1f2937;
         }
         .cta-main:hover {
-            background-color: #fbbf24; /* Amber 400 */
+            background-color: #fbbf24;
             box-shadow: 0 15px 25px -5px rgba(245, 158, 11, 0.4);
         }
-        /* Estilo para el botón secundario (plateado/gris oscuro) */
         .cta-secondary {
-            background-color: #4b5563; /* Gray 600 */
+            background-color: #4b5563;
         }
         .cta-secondary:hover {
-            background-color: #6b7280; /* Gray 500 */
+            background-color: #6b7280;
             box-shadow: 0 15px 25px -5px rgba(75, 85, 99, 0.4);
         }
-        /* Estilo para el botón VIP final */
         .cta-vip {
-            background-color: #10b981; /* Esmeralda/Verde WhatsApp */
+            background-color: #10b981;
             color: #fff;
             box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.7);
         }
@@ -73,7 +75,6 @@
             transform: translateY(-4px); 
         }
 
-        /* ESTILOS ESPECÍFICOS PARA EL VIDEO CLICK-TO-PLAY */
         #video-placeholder {
             cursor: pointer;
             background-size: cover;
@@ -94,19 +95,17 @@
 
     <div class="max-w-4xl mx-auto p-4 sm:p-8 lg:p-10">
 
-        <!-- Encabezado y Título Principal: AUTORIDAD Y VISIÓN -->
+        <!-- Encabezado y Título Principal -->
         <header class="text-center mb-12">
             <span class="text-xs sm:text-sm font-bold tracking-widest uppercase text-primary mb-2 block">CONOCE WORLD GEN</span>
-            
-            <!-- Título Principal -->
             <h1 class="text-5xl sm:text-6xl font-black text-white leading-none mb-4">
                 <span class="text-accent">APRENDE 4 MODELOS DE NEGOCIOS</span> EN LA ERA DIGITAL
             </h1>
         </header>
 
-  <!-- Contenedor del Video de YouTube (Responsive y Enmarcado) -->
-        <div class="mb-12 rounded-2xl overflow-hidden shadow-2xl bg-black border-4 border-primary/50">
-            <div class="relative pt-[56.25%]"> <!-- Proporción 16:9 -->
+        <!-- Contenedor del Video -->
+        <div class="mb-12 rounded-2xl overflow-hidden shadow-2xl bg-black border-4 border-primary">
+            <div class="relative pt-[56.25%]">
                 <iframe 
                     class="absolute top-0 left-0 w-full h-full"
                     src="https://www.youtube.com/embed/jy3-Bj7idcU" 
@@ -117,103 +116,85 @@
             </div>
         </div>
 
-        
-        <!-- SECCIÓN 1: MENSAJE INTRODUCTORIO (MOVIDO Y ACTUALIZADO) -->
+        <!-- SECCIÓN 1 -->
         <section class="text-center mb-8">
             <p class="text-xl sm:text-2xl text-slate-300 font-light max-w-3xl mx-auto">
                 Rompe el ciclo de cambiar tiempo por dinero. Te enseño exactamente que hacer para que construyas un imperio digital que trabaje para ti 24/7.
             </p>
         </section>
 
-        <!-- SECCIÓN 2: BOTONES DE WHATSAPP (MOVIDOS) -->
+        <!-- SECCIÓN 2 -->
         <section class="text-center mb-12">
             <div class="flex flex-col sm:flex-row justify-center space-y-5 sm:space-y-0 sm:space-x-8">
-                
-                <!-- Botón 1: Listo para Comenzar (ACCIÓN PRINCIPAL - DORADO con animación) -->
                 <a 
                     href="https://wa.me/18097072183?text=Ya%20vi%20el%20video,%20Estoy%20listo%20para%20comenzar%20y%20quiero%20mi%20descuento%20y%20mentoría" 
                     target="_blank" 
                     class="whatsapp-button cta-main cta-attention flex items-center justify-center font-black text-xl rounded-full w-full sm:w-auto"
                 >
-                    <!-- Icono de WhatsApp -->
-                    <svg class="w-6 h-6 mr-3 text-slate-900" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.0001 0C8.42103 0 4.99723 1.5492 2.45741 4.29828C-0.0824105 7.04736 -0.613945 10.9705 1.10427 14.6547L0.000147981 24L9.58554 21.0503C11.5818 21.6881 13.6842 21.9999 15.803 21.9999L15.803 21.9999C19.382 21.9999 22.8058 20.4507 25.3456 17.7016C27.8854 14.9525 28.417 11.0293 26.6988 7.34511C24.9806 3.66092 21.5568 2.11172 18.0001 2.11172H12.0001V0Z" fill="currentColor" transform="translate(-1.401 1.00006) scale(0.92, 0.92)"/></svg>
+                    <svg class="w-6 h-6 mr-3 text-slate-900" fill="currentColor" viewBox="0 0 24 24"><path d="M12.0001 0C8.42103 0 4.99723 1.5492 2.45741 4.29828C-0.0824105 7.04736 -0.613945 10.9705 1.10427 14.6547L0.000147981 24L9.58554 21.0503C11.5818 21.6881 13.6842 21.9999 15.803 21.9999C19.382 21.9999 22.8058 20.4507 25.3456 17.7016C27.8854 14.9525 28.417 11.0293 26.6988 7.34511C24.9806 3.66092 21.5568 2.11172 18.0001 2.11172H12.0001V0Z"/></svg>
                     ya vi el video, estoy listo para comenzar (quiero mi descuento)
                 </a>
 
-                <!-- Botón 2: No tengo el dinero, pero lo voy a conseguir (ACCIÓN SECUNDARIA - GRIS OSCURO) -->
                 <a 
                     href="https://wa.me/18097072183?text=No%20tengo%20el%20dinero,%20pero%20lo%20voy%20a%20conseguir" 
                     target="_blank" 
                     class="whatsapp-button cta-secondary flex items-center justify-center font-black text-xl rounded-full w-full sm:w-auto hover:bg-gray-700"
                 >
-                    <!-- Icono de WhatsApp -->
-                    <svg class="w-6 h-6 mr-3 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.0001 0C8.42103 0 4.99723 1.5492 2.45741 4.29828C-0.0824105 7.04736 -0.613945 10.9705 1.10427 14.6547L0.000147981 24L9.58554 21.0503C11.5818 21.6881 13.6842 21.9999 15.803 21.9999L15.803 21.9999C19.382 21.9999 22.8058 20.4507 25.3456 17.7016C27.8854 14.9525 28.417 11.0293 26.6988 7.34511C24.9806 3.66092 21.5568 2.11172 18.0001 2.11172H12.0001V0Z" fill="currentColor" transform="translate(-1.401 1.00006) scale(0.92, 0.92)"/></svg>
+                    <svg class="w-6 h-6 mr-3 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.0001 0C8.42103 0 4.99723 1.5492 2.45741 4.29828C-0.0824105 7.04736 -0.613945 10.9705 1.10427 14.6547L0.000147981 24L9.58554 21.0503C11.5818 21.6881 13.6842 21.9999 15.803 21.9999C19.382 21.9999 22.8058 20.4507 25.3456 17.7016C27.8854 14.9525 28.417 11.0293 26.6988 7.34511C24.9806 3.66092 21.5568 2.11172 18.0001 2.11172H12.0001V0Z"/></svg>
                     No tengo el dinero, pero lo voy a conseguir
                 </a>
             </div>
         </section>
 
-        <!-- SECCIÓN 3: CTA TEXTO (Tu futuro no espera...) - SIN CAJA (ACTUALIZADO) -->
+        <!-- SECCIÓN 3 -->
         <section class="text-center mb-12">
             <h2 class="text-4xl font-extrabold text-white mb-6">
                 TU FUTURO NO ESPERA: El Momento de Tomar el Control es <span class="text-accent">AHORA</span>.
             </h2>
-            
-            <!-- Texto modificado a primera persona con nombre -->
             <p class="text-xl text-slate-300 max-w-3xl mx-auto font-medium">
-                Solo por tiempo limitado: Únete a mi equipo de líderes. Yo, **Wilberk Herrera**, te garantizo mentoría 1:1 y un paquete de bienvenida exclusivo con descuento. Esta es tu oportunidad si eres un visionario que actúa hoy.
+                Solo por tiempo limitado: Únete a mi equipo de líderes. Yo, <strong>Wilberk Herrera</strong>, te garantizo mentoría 1:1 y un paquete de bienvenida exclusivo con descuento. Esta es tu oportunidad si eres un visionario que actúa hoy.
             </p>
         </section>
 
-
-        <!-- Sección de Resumen del Contenido: VALOR Y BENEFICIO (Grid de 3 Columnas) -->
+        <!-- SECCIÓN DE VALOR -->
         <section class="bg-slate-800 p-6 sm:p-10 rounded-2xl shadow-xl mb-12 border-l-8 border-accent">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
                 DE EMPLEADO A EMPRESARIO TOP: El Sistema de <span class="text-accent">Ingreso Irreversible</span>
             </h2>
-            
-            <!-- Texto modificado a primera persona -->
             <p class="text-slate-300 leading-relaxed mb-8 border-b border-slate-700 pb-4">
                 Este video no es solo mi historia, es la demostración de la estrategia que usé para salir de las deudas y el doble empleo, y convertirme en un líder de impacto. Esto es lo que <strong class="text-accent">YO</strong> te ofrezco al unirte a mi equipo:
             </p>
-            
-            <!-- HIGHLIGHTS / COLUMNAS (Grid Layout) -->
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-slate-200">
-                
-                <!-- Punto 1: Mis 4 Pilares de Riqueza Digital -->
                 <div class="bg-slate-700/50 p-6 rounded-xl shadow-lg border-t-4 border-accent">
-                    <svg class="w-8 h-8 text-accent mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+                    <svg class="w-8 h-8 text-accent mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                     <span class="font-extrabold text-lg block mb-2 text-white">1. MIS 4 PILARES DE RIQUEZA DIGITAL.</span> 
                     <span class="text-slate-300 text-sm">Te daré acceso a un consorcio de cuatro modelos de negocio de alta rentabilidad: E-commerce, Trading, Bienestar (FWP) y el sistema de Duplicación. <strong class="text-accent">Mi estrategia es diversificar y proteger tu capital.</strong></span>
                 </div>
 
-                <!-- Punto 2: Mi Mentoría Élite 1:1 -->
                 <div class="bg-slate-700/50 p-6 rounded-xl shadow-lg border-t-4 border-accent">
-                    <svg class="w-8 h-8 text-accent mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+                    <svg class="w-8 h-8 text-accent mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                     <span class="font-extrabold text-lg block mb-2 text-white">2. MI MENTORÍA ÉLITE Y HERRAMIENTAS.</span> 
                     <span class="text-slate-300 text-sm">Yo mismo te conecto con la Academia Digital MIND, donde recibirás mi asesoría directa y las herramientas para que <strong class="text-primary">generes tus primeros ingresos desde la primera semana.</strong></span>
                 </div>
 
-                <!-- Punto 3: Libertad Generacional Irreversible -->
                 <div class="bg-slate-700/50 p-6 rounded-xl shadow-lg border-t-4 border-accent">
-                    <svg class="w-8 h-8 text-accent mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+                    <svg class="w-8 h-8 text-accent mb-3" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                     <span class="font-extrabold text-lg block mb-2 text-white">3. CONSTRUYE TU LEGADO (Ingreso Residual).</span> 
                     <span class="text-slate-300 text-sm">Te enseño a duplicar mi sistema para construir un equipo que te genera ingresos pasivos crecientes (Rangos Gen 350, Gen 10K, etc.). <strong class="text-primary">Mi meta es que alcances la libertad total, no solo para ti.</strong></span>
                 </div>
             </div>
         </section>
 
-        <!-- Sección Motivacional Final: REFUERZO DE LA DECISIÓN -->
-        <section class="text-center mt-12 mb-10 p-6 rounded-xl border-t border-b border-primary/50">
-            <h3 class="text-2xl font-bold text-primary mb-3">
-                ¡LA DECISIÓN CLAVE!
-            </h3>
+        <!-- MOTIVACIONAL FINAL -->
+        <section class="text-center mt-12 mb-10 p-6 rounded-xl border-t border-b border-primary">
+            <h3 class="text-2xl font-bold text-primary mb-3">¡LA DECISIÓN CLAVE!</h3>
             <p class="text-lg text-slate-400 max-w-2xl mx-auto italic">
                 “Los resultados extraordinarios solo llegan a quienes deciden salir de lo ordinario. No esperes el momento perfecto, *créalo*. El mundo está esperando que tomes acción.”
             </p>
         </section>
         
-        <!-- BOTÓN FINAL DE WHATSAPP VIP (AÑADIDO AL FINAL) -->
+        <!-- BOTÓN VIP -->
         <div class="text-center mb-12">
             <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-6">
                 ¡Accede a mi Grupo VIP Exclusivo!
@@ -226,50 +207,20 @@
                 target="_blank" 
                 class="whatsapp-button cta-vip flex items-center justify-center font-black text-xl rounded-full max-w-lg mx-auto hover:bg-emerald-600"
             >
-                <!-- Icono de WhatsApp -->
-                <svg class="w-6 h-6 mr-3 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12.0001 0C8.42103 0 4.99723 1.5492 2.45741 4.29828C-0.0824105 7.04736 -0.613945 10.9705 1.10427 14.6547L0.000147981 24L9.58554 21.0503C11.5818 21.6881 13.6842 21.9999 15.803 21.9999L15.803 21.9999C19.382 21.9999 22.8058 20.4507 25.3456 17.7016C27.8854 14.9525 28.417 11.0293 26.6988 7.34511C24.9806 3.66092 21.5568 2.11172 18.0001 2.11172H12.0001V0Z" fill="currentColor" transform="translate(-1.401 1.00006) scale(0.92, 0.92)"/></svg>
+                <svg class="w-6 h-6 mr-3 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12.0001 0C8.42103 0 4.99723 1.5492 2.45741 4.29828C-0.0824105 7.04736 -0.613945 10.9705 1.10427 14.6547L0.000147981 24L9.58554 21.0503C11.5818 21.6881 13.6842 21.9999 15.803 21.9999C19.382 21.9999 22.8058 20.4507 25.3456 17.7016C27.8854 14.9525 28.417 11.0293 26.6988 7.34511C24.9806 3.66092 21.5568 2.11172 18.0001 2.11172H12.0001V0Z"/></svg>
                 Únete a mi Grupo VIP Exclusivo de WhatsApp
             </a>
         </div>
 
-
-        <!-- Pie de página -->
+        <!-- FOOTER -->
         <footer class="text-center mt-10 text-slate-500 text-sm">
             <p>&copy; 2025 World Gen System. Todos los derechos reservados. | Contacto de Soporte y Mentoría: +1 (809) 707-2183</p>
             <p class="mt-2 text-xs">Descargo de Responsabilidad: Los resultados no están garantizados y dependen del esfuerzo individual.</p>
         </footer>
 
     </div>
-    
-    <!-- SCRIPT DE JAVASCRIPT PARA CARGAR EL VIDEO SOLO AL HACER CLIC -->
-    <script>
-        /**
-         * Función que reemplaza el placeholder de la imagen por el iframe de YouTube
-         * cuando el usuario hace clic.
-         */
-        function loadYouTubeVideo() {
-            const container = document.getElementById('video-placeholder');
-            const videoId = 'jy3-Bj7idcU'; // ID del video de YouTube
-            
-            // Crea el iframe de YouTube con autoplay para que inicie inmediatamente
-            const iframeHTML = `
-                <iframe 
-                    class="absolute top-0 left-0 w-full h-full"
-                    src="https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1&rel=0&modestbranding=1" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-            `;
-            
-            // Reemplaza el contenido del div por el iframe
-            if (container) {
-                container.outerHTML = iframeHTML;
-            } else {
-                console.error("No se encontró el contenedor del video para cargar el iframe.");
-            }
-        }
-    </script>
 
-</body>
-</html>
+    <!-- SCRIPT -->
+    <script>
+        function loadYouTubeVideo() {
+            const container = document.getElementById('video-placeholder
